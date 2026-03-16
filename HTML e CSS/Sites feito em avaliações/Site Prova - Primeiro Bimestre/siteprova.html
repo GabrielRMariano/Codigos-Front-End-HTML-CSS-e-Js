@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			table, th, td {
+			border: 1px solid;
+			}
+			
+			*{
+			font-family: "Comic Sans MS";
+			margin-top: 0px;
+			}
+			header {
+				background-color: blue;
+			}
+			nav {
+				background-color: green;
+				text-align: center;
+			}
+
+			article {
+				background-color: pink;
+			}
+			footer {
+				background-color: red;
+			}
+
+			body{
+				padding: 0;
+				margin: 0;
+			}
+			
+			@media (min-width: 768px) { 
+				body {
+					display:grid;
+					grid-template-rows: 200px 100px 1fr 200px;
+					grid-template-columns: 1fr 2fr;
+					height: 100vh;
+				}
+				footer{
+					grid-column:span 2
+				}
+				nav{
+					grid-column:span 2
+				}
+				header{
+					grid-column:span 2
+				}
+				
+				}
+				article{
+				grid-column: span 2;
+				margin-left: 70px;
+				margin-right: 70px;
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-template-rows: 200px 200px 200px;
+				}
+				
+				img{
+					width: 20%;
+				}
+				.secaoI{
+					display:grid;
+					grid-template-columns: 32vw 56.5vw;
+				}
+				.secao2x1{
+				background-color: cyan;
+				margin: 5px;
+				}
+				.secao1x1{
+				background-color: red;
+				margin: 5px;
+				}
+				.secao2x2{
+				background-color: green;
+				margin: 5px;
+				}
+				.secao1x2{
+				background-color: brown;
+				margin: 5px;
+				height: 80vh;
+				}
+				
+			}
+			@media (max-width: 768px) { 
+				body {
+					display: grid;
+					grid-template-columns: 1fr;
+					grid-template-rows: 200px 200px 200px;
+					margin-left: 0px;
+					margin-right: 0px;
+				}
+				.secaoI{
+					display: grid;
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+		<p> Header </p>
+		</header>
+		<nav>
+		<a href=“https://cti.feb.unesp.br/”> Inicio </a>
+		<a href=“https://cti.feb.unesp.br/”> Sobre </a>
+		<a href=“https://cti.feb.unesp.br/”> Contato </a>
+		</nav>
+		<article>
+		<div class="secaoI">
+			<div class="secao1x1">
+				<p> Seção 1x1: Logo <p>
+				<img src="img/logo.png">
+			</div>
+			<div class="secao2x1">
+				<p> Seção 2x1: Lista </p>
+				<ul>
+					<li> item 1 </li>
+					<li> item 2 </li>
+				</ul>
+			</div>	
+			<div class="secao2x2"> 
+				<p> Seção 2x2:Tabela</p>
+				<table>
+					<tr>
+						<th> Coluna 1 </th>
+						<th> Coluna 2 </th>
+					</tr>
+					<tr>
+						<td> Item 1 </td>
+						<td> Item 2 </td>
+					</tr>
+				</table>
+			</div>
+			<div class="secao1x2"> 
+				<p>Seção 1x2: Texto </p>
+				<b>Olá!</b><br><br>
+				<p>Site da prova!!</p>
+			</div>
+		</div>
+		</article>
+		<footer>
+		<p> Rodapé <p>
+		</footer>
+	</body>
+</html>

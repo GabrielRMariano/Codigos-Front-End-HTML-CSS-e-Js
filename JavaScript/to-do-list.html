@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://c8.alamy.com/comp/KDXYYG/accountant-dog-with-pencil-and-notepad-KDXYYG.jpg">
+    <title>Lista To-Do</title>
+    <style>
+        * {
+            font-family: 'Comic Sans MS';
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+        }
+        p {
+            background-color: #474848;
+            color: white;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            background-color: gray;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            flex-wrap: nowrap; 
+        }
+        li.completed {
+            background-color: rgb(178, 247, 178);
+            color: darkgray;
+        }
+
+        .caixa {
+            align-items: center;
+            background-color: #353535;
+            padding: 20px;
+            border-radius: 10px;
+            border: solid 2px;
+            border-color: whitesmoke;
+        }
+        .tarefa {
+            flex: 1 1 auto;
+            margin-right: 10px;
+            overflow-wrap: break-word;
+        }
+
+        .remover, .concluir {
+            background-color: transparent;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.2em; 
+            width: 30px; 
+            height: 30px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .remover { background-color: red; }
+        .remover:hover { background-color: rgb(195, 0, 0); }
+        .remover:active { background-color: darkred; }
+        .remover::before { content: "X"; }
+
+        .concluir { background-color: lightgreen; }
+        .concluir:hover { background-color: rgb(98, 247, 98); }
+        .concluir:active { background-color: green; }
+        .concluir::before { content: "V"; }
+    </style>
+</head>
+<body>
+    <script>
+        function adicionarTarefa(){
+            const texto = caixaTexto.value.trim();
+            if (texto === '') return;
+            
+            const lista = document.getElementById('listaTarefas');
+            const item = document.createElement('li');
+
+            item.innerHTML = `
+                <span class='tarefa'>${texto}</span>
+                <button class="concluir" onclick="concluirTarefa(this)"></button>
+                <button class="remover" onclick="removerTarefa(this)"></button>
+            `;
+            lista.appendChild(item);
+            caixaTexto.value = '';
+        }
+
+        function concluirTarefa(button) {
+            const item = button.parentElement;
+            if (item.classList.contains('completed')) { 
+                item.classList.remove('completed'); 
+            } 
+            else { item.classList.add('completed'); }
+        }
+
+        function removerTarefa(button) {
+            if (confirm('Você tem certeza que deseja remover esta tarefa?')) {
+                const item = button.parentElement;
+                item.remove();
+            }
+        }
+    </script>
+    <div class="caixa">
+        <h1>To-do List</h1>
+        <input type="text" id="caixaTexto" placeholder="Digite uma tarefa"></input>
+        <button onclick="adicionarTarefa()">Adicionar</button>
+        <ul id="listaTarefas"></ul>
+    </div>
+</body>
+
+<!--
+            const input = document.getElementById('task-input');
+            const taskText = input.value.trim();
+            if (taskText === '') return;
+
+            const taskList = document.getElementById('task-list');
+            const taskItem = document.createElement('li');
+            taskItem.innerHTML = `
+                <span class="task-text">${taskText}</span>
+                <button class="check-button" onclick="concluirTarefa(this)"></button>
+                <button class="remove-button" onclick="removerTarefa(this)"></button>
+            `;
+            taskList.appendChild(taskItem);
+
+            input.value = '';
+            
+            
+            if (caixaTexto.value != "" && caixaTexto.value != " "){
+                let lista = document.querySelector("div");
+                let texto = document.createElement('p');
+
+                texto.textContent = caixaTexto.value;
+                lista.appendChild(texto);
+            }
+            else{
+                alert("Favor preencher a caixa de texto antes de apertar o botão de confirmar.")
+            }
+            
+            -->
+</html>

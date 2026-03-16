@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<style>
+
+.imagem_foto{
+    border-radius: 20px;
+    width: 90%;
+    height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+h1{
+    color: rgb(32, 124, 32);
+    padding: 5px;
+}
+
+p{
+    padding: 5px;
+}
+
+.name{
+    text-align: center;
+    font-size: 20px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+
+header{
+    background-color: whitesmoke;
+    color: rgb(10, 95, 35);
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Comic Sans MS';
+}
+
+aside{
+    background-color: rgb(0, 66, 0);
+    text-align: left;
+    padding: 5px;
+    font-family: 'Comic Sans MS';
+    color: white;
+}
+
+article{
+    background-color: rgb(255, 255, 255);
+    font-family: 'Comic Sans MS';
+    padding: 5px;
+}
+
+*{
+    margin: 0px;
+}   
+
+#redes{
+    text-align: center;
+}
+
+ul{
+    text-align: left;
+}
+
+@media (min-width: 769px){
+    .grid{
+        grid-template-columns: 1.5fr 6fr;
+        grid-template-rows: auto;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+    }
+}
+</style>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curriculo</title>
+    </head>
+    <body>
+            <header> 
+                Currículo 
+            </header>
+        <div class="grid">
+            <aside>
+                <div class="canto">
+                    <p class="name"> Gabriel Mariano </p>
+                    <img src="img/IMG_3656.png" class = "imagem_foto">
+                    <h1 id="redes"> Redes Sociais: </h1>
+                    <ul>
+                        <li><a> Twitter </a></li>
+                        <li><a> Instagram </a></li>
+                        <li><a> Youtube </a></li>
+                        <li><a> Pinterest </a></li>
+                    </ul>
+                </div>
+            </aside>
+            <article>
+                <h1> Áreas de Atuação </h1>
+                <p>Atuo na área de informática, possuo conhecimento de C#, Java, PHP, HTML e CSS.</p>
+                <h1> Informações Pessoais </h1>
+                <p>Sou de agudos SP, estudei no colégio técnico industrial, entrei em 2023 ao passar na prova de 2022, prestei para informática, onde curso até os dias atuais. Minhas antigas escolas são: Colégio Máximo e FAAG, lá fiz alguns amigos que inclusive também passaram no CTI e estudam comigo hoje em dia.</p>
+                <h1> Hobbies </h1>
+                <p>Gosto de jogar bastante nos tempos livres, principalmente valorant, assistia animes, sou fã de Umineko No Naku Koro Ni, gosto muito de esportes, como pode ver sou Palmeirense, como minha família e gosto muito de conversar.  </p>
+                <h1> </h1>
+            </article>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: 100vh;
+            position: relative;
+        }
+        div {
+            position: absolute;
+            height: 10%;
+            width: 10%;
+        }
+        .animacao {
+            background-color: blue;
+            animation: x 5s linear 0s infinite;
+            transition: all 2s;
+        }
+        .transicao{
+            background-color: red;
+            top: 0%; 
+            left: 50%; 
+            transform: translate(-50%,0%);
+        }
+
+        .transicao:hover ~ .animacao{
+            background-color: black;
+            animation: x 5s linear 0s infinite, 5s linear 1s infinite;
+        }
+
+        .transicao2{
+            background-color: orange;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%,0);
+        }
+
+        .transicao2:active ~ .animacao{
+            animation-play-state: paused;
+        }
+
+        @keyframes x {
+            0%, 100% { top: 0%; left: 0%;}
+            25% { top: 90%; left: 90%; }
+            50% { top: 0%; left: 90%; }
+            75% { top: 90%; left: 0%;}
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="transicao"></div>
+    <div class="transicao2"></div>
+    <div class="animacao"></div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+* {
+    margin: 0px;
+}
+
+a, .nome {
+    color: grey;
+}
+
+aside {
+    background: #ddd;
+    font-family: 'Courier New', Courier, monospace;
+    list-style-type: none;
+}
+
+article {
+    padding-bottom: 50px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 2%, rgba(79,97,214,1) 25%, rgba(0,212,255,1) 100%);
+}
+
+footer {
+    background: black;
+    color: #ffffff;
+    font-family: "Arial";
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+header{
+    background: rgb(0,0,0);
+    color: white;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+img {
+    width: 50%;
+}
+
+nav, .topnav {
+    background: #ffffff;
+}
+
+
+.broches,.stickers, .posters{
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin: 10px;
+}
+
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+}
+  
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+.topnav a.ativo {
+    background-color: #2196F3;
+    color: white;
+}
+
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+.Preco {
+    font-size: 40px;
+}
+@media(min-width: 768px) /* computador */
+{
+    li {
+        font-size: 15px;
+    }
+    body {
+        display: grid;
+        grid-template-columns: 15% 80% 5%;
+        grid-template-rows: 50px 48px 1fr;
+        height: 100vh;
+    }
+    header, nav {
+        grid-column: span 3;
+    }
+    article {
+        grid-column: span 2;
+    }
+    
+    .nome {
+        font-size: 12px;
+    }
+    .broches, .stickers, .posters{
+        display: flex;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .broches img{
+        margin-top: 3vh;
+    }
+    .posters img{
+        margin-top: 6vh;
+    }
+    .stickers img{
+        margin-top: 2vh;
+    }
+    .broches{
+        padding-bottom: 10px;
+    }
+    
+    .posters{
+        padding-bottom: 10px;
+    }
+    
+    .stickers{
+        padding-bottom: 30px;
+    }
+}
+
+@media(max-width: 425px) /* celular */
+{
+    li {
+        font-size: 18px;
+    }
+    body {
+        display: grid;
+        min-height: 100vh;
+        grid-template-rows: 50px 48px 95px 1fr;
+    }
+
+    .broches,.posters,.stickers{
+        display: grid;
+    }
+    div{
+        text-align: center;
+    }
+    .broches{
+        padding-bottom: 10px;
+    }
+    
+    .posters{
+        padding-bottom: 10px;
+    }
+    
+    .stickers{
+        padding-bottom: 10px;
+    }
+
+}
+
+@media(min-width: 425px) and (max-width: 768px) /* tablet */
+{
+    li {
+        font-size: 13px;
+    }
+    body {
+        display: grid;
+        min-height: 100vh;
+        grid-template-columns: 23% 77%;
+        grid-template-rows: 50px 48px 1fr;
+    }
+    header, nav {
+        grid-column: span 2;
+    }
+    .broches{
+        padding-bottom: 10px;
+    }
+    .broches,.posters,.stickers{
+        display: grid;
+    }
+    div{
+       text-align: center;
+    }
+
+    .posters{
+        padding-bottom: 10px;
+    }
+    
+    .stickers{
+        padding-bottom: 10px;
+    }
+}

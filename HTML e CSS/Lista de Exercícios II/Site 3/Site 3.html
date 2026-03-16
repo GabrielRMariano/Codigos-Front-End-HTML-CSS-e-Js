@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<style>
+
+*{
+    margin: 0px
+}
+
+.antigos{
+    text-align: center;
+}
+
+h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+th{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: left;
+}
+
+body{
+    height: 100vh;
+    margin: 0px
+}
+
+a{
+    color: white;
+}
+
+li{
+    font-family: 'Courier New', Courier, monospace;
+    list-style-type: none;
+}
+
+li:hover{
+    background-color: grey;
+}
+
+p{
+    text-align: center;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+
+header{
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+}
+
+aside{
+    background-color: rgb(78, 78, 78);
+    padding: 5px;
+    text-align: left;
+}
+
+article{
+    background-color: rgb(190, 190, 190);
+}
+
+footer{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: "Comic Sans MS";
+    text-align: center;
+}
+
+@media(max-width: 768px)
+{
+    body{
+            grid-template-columns: minmax(250px, 1fr);
+            grid-template-rows: auto auto auto 10vh;
+        }
+
+    aside{
+        text-align: center;
+    }
+    .dia img{
+        width: 70%;
+    }
+
+    .antigos img{
+        width: 70%;
+    }
+}
+@media(min-width: 768px)
+{
+    body
+    {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: auto auto auto 10vh;
+    }
+
+    header{
+        grid-column: span 3;
+    }
+
+    article{
+        grid-column: span 2;
+    }
+
+    footer{
+        grid-column: span 3;
+    }
+
+    .dia img{
+        width: 55%;
+    }
+
+    .antigos{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .antigos img{
+        width: 90%;
+    }
+}
+</style>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Blog diário </title>
+    </head>
+    <body>
+        <header> Blog do Gabriel Mariano </header>
+        <aside>
+            <ul>
+                <li><a href="#postagemdodia">Postagem do dia</a></li>
+                <li><a href="#postagensantigas">Postagem antigas</a></li>
+
+            </ul>
+        </aside>
+        <article>
+            <div class="dia">
+            <h3 id="postagemdodia"> Postagem do dia </h3>
+                <p><img src="img/flaco-lopez-em-acao-durante-palmeiras-x-santos-jogo-do-campeonato-paulista-1706481536801_v2_4x3.jpg"> </p>
+                <p> Será que meu Palmeiras vence o Santos amanhã?<br>(spoiler do futuro: vence!! jhow está triste...)</p>
+            </div>    
+            <h3 id="postagensantigas"> Postagens antigas </h3>
+            <div class="antigos"> 
+                <h3> Postagem 4<br><img src="img/como-baixar-valorant-de-graca-the-squad.png"><br>Ganhei 2500 vp como eu gasto????</h3>    
+                <h3> Postagem 3<br><img src="img/800px-Avenged_Sevenfold_2.png"><br>Ouçam Avenged sevenfold!!</h3>
+                <h3> Postagem 2<br><img src="img/f5b91777fe5eec2c7762ed1476bd806c.png"><br>Socorro, eu não entendo nada de química</h3>
+                <h3> Postagem 1<br><img src="img/frieren.png"><br>Assistam Sousou no Frieren!! anime bom demais!! </h3>
+            </div>
+        </article>    
+        <footer><br> Blog do @GabMariano <br><br></footer>
+    </body>
+</html>
